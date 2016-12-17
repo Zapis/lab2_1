@@ -11,6 +11,13 @@ public class BinarySearchSekwencjaTest {
 	int[] seq ={1,2,3,4,5};
 	
 	@Test
+	public void keyFoundInSec2(){
+		SearchResult searchResult = BinarySearch.search(key, seq);
+		int i = searchResult.getPosition();
+		assertThat(key,is(seq[i]));
+	}
+	
+	@Test
 	public void KeyFoundInSec(){
 		SearchResult searchResult = BinarySearch.search(key, seq);
 		int i = searchResult.getPosition();
