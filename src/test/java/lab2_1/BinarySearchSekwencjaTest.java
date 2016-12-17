@@ -62,5 +62,14 @@ public class BinarySearchSekwencjaTest {
 	assertEquals(key,seq[i]);
 	}
 	
+	@Test
+	public void KeyNotInSec(){
+	int key = 2;
+	int[] seq = {1,3,4,5,6};
+	SearchResult searchResult =BinarySearch.search(key,seq);
+	int i = searchResult.getPosition();
+	assertTrue(searchResult.isFound());
+	assertEquals(key,seq[i]);
+	}
 	
 }
