@@ -2,8 +2,9 @@ package lab2_1;
 
 import static org.junit.Assert.*;
 
+import org.hamcrest.Matcher;
 import org.junit.Test;
-
+import static org.hamcrest.CoreMatchers.*;
 import edu.iis.mto.bsearch.BinarySearch;
 import edu.iis.mto.bsearch.SearchResult;
 
@@ -51,6 +52,13 @@ public class BinarySearchSekwencjaTest {
 		assertTrue(searchResult.isFound());
 		assertEquals(key,seq[i]);
 		}
+	
+	@Test
+		public void KeyLastInSecHeu(){
+		int key = 1;
+		int[] seq={5,2,1,4,3};
+		assertThat(key,is(seq[3]));
+	}
 	/*
 	@Test
 	public void KeyInTheMiddleInSec(){
@@ -72,4 +80,7 @@ public class BinarySearchSekwencjaTest {
 		assertEquals(key,seq[i]);
 		}
 	*/
-}
+
+
+	}
+
