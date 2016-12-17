@@ -14,7 +14,7 @@ public class BinarySearchSekwencjaTest {
 	public void keyFoundInSec2(){
 		SearchResult searchResult = BinarySearch.search(key, seq);
 		int i = searchResult.getPosition();
-		assertThat(key,is(seq[i]));
+		assertThat(key,is(seq[i-1]));
 	}
 	
 	@Test
@@ -22,21 +22,27 @@ public class BinarySearchSekwencjaTest {
 		SearchResult searchResult = BinarySearch.search(key, seq);
 		int i = searchResult.getPosition();
 		assertTrue(searchResult.isFound());
-		assertEquals(key, seq[i]);
+		assertEquals(key, seq[i-1]);}
+		
+		@Test
+		public void keyNotFoundInSec2(){
+			SearchResult searchResult = BinarySearch.search(key, seq);
+			int i = searchResult.getPosition();
+			assertThat(key,is(seq[i-1]));
 }
 	@Test
 	public void KeyNotFoundInSec(){
 		SearchResult searchResult = BinarySearch.search(key, seq);
 		int i = searchResult.getPosition();
 		assertFalse(searchResult.isFound());
-		assertEquals(-1, i);
+		assertEquals(-1, seq[i]);
 }
 	@Test
 	public void KeyFirstInSec(){	
 		SearchResult searchResult =BinarySearch.search(key,seq);
 		int i = searchResult.getPosition();
 		assertTrue(searchResult.isFound());
-		assertEquals(key, seq[i]);
+		assertEquals(key, seq[i-1]);
 		}
 	
 	@Test
@@ -44,7 +50,7 @@ public class BinarySearchSekwencjaTest {
 		SearchResult searchResult =BinarySearch.search(key,seq);
 		int i = searchResult.getPosition();
 		assertTrue(searchResult.isFound());
-		assertEquals(key,seq[i]);
+		assertEquals(key,seq[i-1]);
 		}
 	
 	@Test
@@ -52,7 +58,7 @@ public class BinarySearchSekwencjaTest {
 		SearchResult searchResult =BinarySearch.search(key,seq);
 		int i = searchResult.getPosition();
 		assertTrue(searchResult.isFound());
-		assertEquals(key,seq[i]);
+		assertEquals(key,seq[i-1]);
 		}
 	
 	@Test
@@ -60,7 +66,7 @@ public class BinarySearchSekwencjaTest {
 		SearchResult searchResult =BinarySearch.search(key,seq);
 		int i = searchResult.getPosition();
 		assertTrue(searchResult.isFound());
-		assertEquals(key,seq[i]);
+		assertEquals(key,seq[i-1]);
 		}
 	
 }
