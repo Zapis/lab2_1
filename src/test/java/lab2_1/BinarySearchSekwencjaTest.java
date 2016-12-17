@@ -7,8 +7,8 @@ import static org.hamcrest.CoreMatchers.*;
 
 public class BinarySearchSekwencjaTest {
 
-	int key = 4;
-	int[] seq ={1,2,3,4};
+	int key = 3;
+	int[] seq ={1,2,3,4,5};
 	
 	@Test
 	public void KeyFoundInSec(){
