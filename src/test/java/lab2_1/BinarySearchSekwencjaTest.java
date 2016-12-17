@@ -42,6 +42,17 @@ public class BinarySearchSekwencjaTest {
 		assertEquals(key, seq[i]);
 		}
 	
+	@Test
+	public void KeyLastInSec(){
+	int key = 5;
+	int[] seq = {1,3,4,5};
+	SearchResult searchResult =BinarySearch.search(key,seq);
+	int i = searchResult.getPosition();
+	assertTrue(searchResult.isFound());
+	assertEquals(key,seq[i]);
+	
+	
+	}
 	
 		
 	
