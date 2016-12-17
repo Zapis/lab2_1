@@ -22,7 +22,7 @@ public class BinarySearchSekwencjaTest {
 }
 	@Test
 	public void KeyNotFoundInSec(){
-		int key = 4;
+		int key = 6;
 		int[] seq = {4};
 
 		SearchResult searchResult = BinarySearch.search(key, seq);
@@ -61,4 +61,6 @@ public class BinarySearchSekwencjaTest {
 	assertTrue(searchResult.isFound());
 	assertEquals(key,seq[i]);
 	}
+	
+	
 }
