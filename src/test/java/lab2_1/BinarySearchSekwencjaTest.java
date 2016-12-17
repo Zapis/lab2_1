@@ -50,10 +50,15 @@ public class BinarySearchSekwencjaTest {
 	int i = searchResult.getPosition();
 	assertTrue(searchResult.isFound());
 	assertEquals(key,seq[i]);
-	
-	
 	}
 	
-		
-	
+	@Test
+	public void KeyInTheMiddleInSec(){
+	int key = 4;
+	int[] seq = {1,3,4,5,6};
+	SearchResult searchResult =BinarySearch.search(key,seq);
+	int i = searchResult.getPosition();
+	assertTrue(searchResult.isFound());
+	assertEquals(key,seq[i]);
+	}
 }
