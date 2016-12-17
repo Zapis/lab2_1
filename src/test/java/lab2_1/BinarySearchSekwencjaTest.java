@@ -3,6 +3,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import edu.iis.mto.bsearch.BinarySearch;
 import edu.iis.mto.bsearch.SearchResult;
+import static org.hamcrest.CoreMatchers.*;
 
 public class BinarySearchSekwencjaTest {
 
@@ -17,7 +18,7 @@ public class BinarySearchSekwencjaTest {
 }
 	@Test
 	public void KeyNotFoundInSec(){
-		int key = 6;
+		int key = 1;
 		int[] seq = {4};
 		SearchResult searchResult = BinarySearch.search(key, seq);
 		int i = searchResult.getPosition();
@@ -27,8 +28,7 @@ public class BinarySearchSekwencjaTest {
 	@Test
 	public void KeyFirstInSec(){
 		int key = 1;
-		int[] seq = {1,3,4,5,9};
-		
+		int[] seq = {1,3,4,5,9};	
 		SearchResult searchResult =BinarySearch.search(key,seq);
 		int i = searchResult.getPosition();
 		assertTrue(searchResult.isFound());
